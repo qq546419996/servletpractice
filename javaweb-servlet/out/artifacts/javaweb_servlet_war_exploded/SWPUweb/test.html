@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>西南石油大学电子邮件系统</title>
+        <link rel="Stylesheet" type="text/css" href="design.css" >
+        <script>
+            /*function getCookie(cname){
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0; i<ca.length; i++) {
+                    var c = ca[i].trim();
+                    if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+                }
+                return "";
+            }
+            function checkCookie() {
+                var user = getCookie("username");
+                var name= document.getElementById("uer_name").value;
+                var pwd = getCookie("pwd");
+                var password=document.getElementById("psw").value;
+            }
+            window.onload=function () {
+                checkCookie();
+            }
+            function login()
+            {
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                var e=document.getElementById("error");
+                if(username=="tom"&&password=="123")
+                {
+                    window.open("https://mail.swpu.edu.cn");
+                }
+                else
+                {
+                    e.innerText=("用户名或密码不正确");
+                    return;
+                }
+            }*/
+        </script>
+    </head>
+
+    <body>
+        <div class="t">
+            <div class="h">
+                <div class="logo">
+                    <img src="/images/login_logo.png">
+                </div>
+                <a class="help" href="/?q=help" target="_blank">帮助</a>
+            </div>
+        </div>
+
+        <div class="c">
+            <div class="box" style="left: auto;top: 60px;right: 60px;">
+                <ul class="tab">
+                    <li class="current" onclick="tabClick(this)">账号登录</li>
+                    <li class="dragbar"></li>
+                </ul>
+                <div class="boxc">
+                    <h3>
+                        用户登录
+                    </h3>
+                    <div class="text_item">
+                        <input class="text" style="font-size: 20px;ime-mode: disabled;" id="username"
+                            onfocus="this.className='text_f'" onblur="this.className='text'" type="text" 
+                            placeholder="用户名" autocomplete="off" _placeholder="用户名"/>
+                    </div>
+                    <form name="from_login" method="POST" action="">
+                        <div class="text_item">
+                            <input name="user" class="text" type="hidden" value=""/>
+                            <input name="password" class="text" onfocus="this.className='text_f'" id="password"
+                                onblur="this.className='text'" type="password" placeholder="密码" _placeholder="密码"/>
+                        </div>
+                        <div class="bl">
+                            <span style="float: left;">
+                                <input name="login_ssl" type="hidden" value="0"/>
+                                <p id="problem" style="color: red;font-family: 宋体;clear: both;">学生选择@stu.swpu.edu.cn</p>
+                            </span>
+                            <span class="blt">
+                                <a href="/?q=resetpw" target="_self">忘记密码</a>
+                            </span>
+                        </div>
+                        <div class="btnb">
+                            <input name="sumbit" class="btn" style="float: right;" type="button" value="登录" onclick="login()"/>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="f" style="display: none;"></div>
+            <div class="login_drag"></div>
+        </div>
+
+        <div class="foot">西南石油大学</div>
+    </body>
+</html>
